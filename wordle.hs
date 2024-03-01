@@ -42,7 +42,6 @@ playWordle target attemptsLeft
     | otherwise = do
         putStrLn $ "Attempts left: " ++ show attemptsLeft
         putStrLn "Enter your guess:"
-        putStrLn target
         guess <- getLine
         let feedback = evaluateGuess guess target
         if validateInput guess 
